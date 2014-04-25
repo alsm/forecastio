@@ -49,7 +49,7 @@ func main() {
 		}
 	}
 	if len(f.Daily.Data) > 0 {
-		fmt.Printf("Summary for tomorrow: %s\n", f.Hourly.Summary)
+		fmt.Printf("Summary for next 7 days: %s\n", f.Daily.Summary)
 		for _, d := range f.Daily.Data {
 			fmt.Printf("Time: %s  Temperature (Min/Max): %2.0f/%2.0f°  Pressure: %4.0fmb  - %s\n", d.Time.Format("02/Jan/2006"), d.TemperatureMin, d.TemperatureMax, d.Pressure, d.Summary)
 		}
