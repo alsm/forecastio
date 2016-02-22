@@ -19,6 +19,7 @@ var rootTemplate string = `
 <body>
 <h1>Go Weather</h1>
 <p id="weather"></p>
+{{ $rune := .unicode.utf8.DecodeRune []byte("Hello") }} {{ println $rune }}
 <script>
 var x = document.getElementById("weather");
 navigator.geolocation.getCurrentPosition(function (position)
